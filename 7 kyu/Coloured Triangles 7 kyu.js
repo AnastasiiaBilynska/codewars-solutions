@@ -13,4 +13,18 @@ function triangle(row) {
   
     return triangle(result);
   }
+  function createNewColor(first, second) {
+    const r = "R";
+    const b = "B";
+    const g = "G";
+    if (first === second) {
+      return first;
+    } else if ((first === r && second === b) || (first === b && second === r)) {
+      return g;
+    } else if ((first === b && second === g) || (first === g && second === b)) {
+      return r;
+    } else {
+      return b;
+    }
+  }
   
